@@ -1,0 +1,12 @@
+{
+  "name": "FloodSense AI",
+  "description": "Real-time flood risk intelligence and disaster preparedness platform utilizing AI-driven weather analysis.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "AI-powered weather analysis",
+    "Real-time flood risk monitoring",
+    "Disaster preparedness tools"
+  ]
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Sora:wght@300;400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #020617;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-2: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-2: rgba(255, 255, 255, 0.15);
+  --color-amber: #f59e0b;
+  --color-amber-light: #fcd34d;
+  --color-orange: #f97316;
+  --color-neon-blue: #38bdf8;
+  --color-neon-purple: #a855f7;
+  --color-neon-red: #f43f5e;
+  
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: 'Sora', sans-serif;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface backdrop-blur-[10px] border border-border;
+  }
+  .glow-text {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  }
+  .neon-border-blue {
+    @apply border-l-4 border-l-neon-blue;
+  }
+  .neon-border-purple {
+    @apply border-l-4 border-l-neon-purple;
+  }
+}
+
+@layer base {
+  body {
+    @apply text-[#94a3b8] font-sans text-sm selection:bg-amber/30 selection:text-amber-light;
+    background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
